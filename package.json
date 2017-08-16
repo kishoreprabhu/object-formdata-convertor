@@ -1,0 +1,25 @@
+{
+  "name": "object-formdata-convertor",
+  "version": "1.0.0",
+  "description": "A module used to convert formdata to json, form to json, json to formdata",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "formdata",
+    "json",
+    "form",
+    "conversion",
+    "javscript",
+    "submit"
+  ],
+  "repository" : {
+    "type" : "git",
+    "url" : "git+https://github.com/kishoreprabhu/object-formdata-converter.git"
+  },
+  "bugs" : { 
+    "url" : "https://github.com/kishoreprabhu/object-formdata-convertor/issues",
+    "email" : "kishoreprabhu97@gmail.com"
+  },
+  "author": "kishore prabhu",
+  "license": "ISC"
+}
