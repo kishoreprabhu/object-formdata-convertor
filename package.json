@@ -14,7 +14,7 @@
   ],
   "repository" : {
     "type" : "git",
-    "url" : "git+https://github.com/kishoreprabhu/object-formdata-converter.git"
+    "url" : "https://github.com/kishoreprabhu/object-formdata-convertor"
   },
   "bugs" : { 
     "url" : "https://github.com/kishoreprabhu/object-formdata-convertor/issues",
