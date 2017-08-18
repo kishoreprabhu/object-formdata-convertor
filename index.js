@@ -1,6 +1,7 @@
 /**
  * converts formdata to plain js object 
  * @param {object} formData
+ * @return {object} _converted_json
  */
 exports.FormDataToJson = (formData) => {
     var _serialized_data
@@ -25,6 +26,7 @@ exports.FormDataToJson = (formData) => {
 /**
  * converts plain js object into formdata
  * @param {object} object
+ * @return {object} formdata
  */
 exports.JsonToFormData = (object) => {
     var _this = this, 
@@ -44,4 +46,23 @@ exports.JsonToFormData = (object) => {
         throw new Error("Expected json object as param");
     }
     return formData;
+}
+
+/**
+ * return value for key from formdata
+ * @param {string} keyName
+ * @param {object} formData
+ */
+exports.toValue = (keyName, formData) => {
+     var _entries = {};
+     if ( formData && typeof(formData) === "object" && keyName ) {
+         _entries = formData.entries();
+        for (const [key, value] of _entries) {
+            if ( key === keyName ) {
+                return value;
+            }
+        }
+     } else {
+         throw new Error("expected keyname and formdata as parameter");
+     }
 }
