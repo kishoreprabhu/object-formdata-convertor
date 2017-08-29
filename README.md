@@ -7,6 +7,10 @@ npm install object-formdata-convertor
 
 ## Usage
 ```javascript
+var manipulator = require("object-formdata-convertor");
+```
+                    OR
+```javascript
 import manipulator from "object-formdata-convertor";
 ```
 
@@ -18,8 +22,8 @@ console.log(jsonObject, "returns json from formdata");
 ```
 
 #### Form to JSON
-```javascript
-var formDom = "hold form dom from which json need to be returned";
+```javascript 
+var formDom = document.querySelector('form');
 var jsonObject = manipulator.FormDataToJson(formDom);
 console.log(jsonObject, "returns json from form element");
 ```
@@ -32,6 +36,12 @@ var jsonObj = {
 };
 var formData = manipulator.JsonToFormData(jsonObj);
 console.log(formData, "returns formdata from json");
+```
+#### FORM to JSON
+```javascript
+var formDom = document.querySelector('form');
+var formdata = manipulator.formToFormData( formDom );
+console.log(formData, "returns formdata from form element");
 ```
 
 #### To get value for a key from form data
@@ -47,7 +57,9 @@ var jsonObject = manipulator.FormDataToJson(formData/formDom);
 
 var formData = manipulator.JsonToFormData(json);
 
-var value = toValue(formData);
+var formData = manipulator.formToFormData(formDom);
+
+var value = toValue(formData, keyName);
 ```
 
 

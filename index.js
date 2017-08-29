@@ -66,3 +66,16 @@ exports.toValue = (keyName, formData) => {
          throw new Error("expected keyname and formdata as parameter");
      }
 }
+
+/**
+ * converts form to form data
+ * @param {DOMreference} form
+ */
+exports.formToFormData = ( form ) => {
+	if ( form && form.nodeName === "FORM" ) {
+		let _formdata = new FormData(form);
+		return _formdata;
+	} else {
+		throw new Error("expected form element as parameter");
+	}
+}
