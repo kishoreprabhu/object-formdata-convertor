@@ -9,7 +9,7 @@ npm install object-formdata-convertor
 ```javascript
 var manipulator = require("object-formdata-convertor");
 ```
-                    OR
+
 ```javascript
 import manipulator from "object-formdata-convertor";
 ```
@@ -37,7 +37,7 @@ var jsonObj = {
 var formData = manipulator.JsonToFormData(jsonObj);
 console.log(formData, "returns formdata from json");
 ```
-#### FORM to JSON
+#### FORM to FormData
 ```javascript
 var formDom = document.querySelector('form');
 var formdata = manipulator.formToFormData( formDom );
